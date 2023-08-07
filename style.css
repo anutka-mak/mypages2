@@ -121,6 +121,7 @@ header {
     font-family: 'Lexend', sans-serif;
     color: var(--mrt-app-neutral-01, #8285a6);
     font-size: 16px;
+    font-weight: 300;
     text-align: center;
     font-style: normal;
     line-height: 28px;
@@ -174,6 +175,7 @@ header {
     font-family: 'Lexend', sans-serif;
     color: var(--mrt-app-neutral-01, #626687);
     font-size: 16px;
+    font-weight: 300;
     text-align: center;
     font-style: normal;
     line-height: 28px;
