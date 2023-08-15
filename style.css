@@ -25,7 +25,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  overflow-x: hidden;
 }
 ol, ul {
   list-style: none;
@@ -45,17 +44,31 @@ table {
 
 /* navigation */
 
+.content-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    width: 1440px;
+    overflow-x: hidden;
+    align-items: center;
+    border: 1px solid red;
+
+}
+
+.header {
+    width: 1440px;
+}
+
 .nav-bar {
     display: inline-flex;
-    width: auto;
+    width: 100%;
     height: 46px;
-    padding-left: 120px;
     padding-top: 46px;
     position: absolute;
     align-items: center;
     align-self: center;
     gap: 597px;
     z-index: 100;
+    padding-left: 120px;
 }
 
 .nav-bar__logo-img {
@@ -150,8 +163,7 @@ table {
     height: auto;
     display: inline-flex;
     align-items: center;
-    gap: 154px;
-    padding-left: 120px;
+    gap: 94px;
 }
 
 .hero-section {
@@ -263,7 +275,7 @@ table {
     background-size: 720px;
     width: 720px;
     height: 720px;
-    z-index: 50px;
+    z-index: 50;
 }
 
 .first-block__icons {
@@ -271,7 +283,6 @@ table {
     width: 120px;
     height: 100px;
     display: flex;
-    align-self: left;
     align-items: flex-start;
 }
 
@@ -308,7 +319,6 @@ table {
     align-items: center;
     position: absolute;
 }
-
 
 /*right side hero-section 2 block*/
 
@@ -596,9 +606,9 @@ table {
 }
 
 .card-description-right__label {
-    color: var(--mrt-app-headline, #1B1C57);
+    color: #1B1C57;
     font-size: 24px;
-    font-style: bold;
+    font-style: 700;
     font-weight: 700;
     line-height: 32px;
     text-transform: capitalize;
@@ -990,6 +1000,11 @@ table {
 .image {
     position: relative;
 }
+.label-with-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 .label-status_color-red {
     position: absolute;
@@ -1124,6 +1139,7 @@ table {
 }
 
 .cards {
+    width: 100%;
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -1134,20 +1150,41 @@ table {
     opacity: 1;
 }
 
-@media screen (min-width: 900px){
+@media screen and (max-width: 348px) {
+    .content-wrapper {
+
+    }
+    .nav-bar {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        position: relative;
+        width: 348px;
+    }
     .hero-section {
-        display: inline-block;
+        position: relative;
+        width: 100%;
+        display: inline-flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 10px;
         align-items: center;
     }
 
     .choice-section {
-        display: flex;
-        flex-direction: column;
+        display: inline-flex;
+        flex-wrap: wrap;
         height: 700px;
+        width: 400px;
         gap: 20px;
      
+    }
+
+    .cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex: 1 1 160px;
     }
 
     .transition-between-tabs {
@@ -1155,7 +1192,7 @@ table {
         flex-direction: row;
         margin-left: 40px;
         height: 52px;
-        width: auto;
+        width: 100%;
     }
 
     .first-blur-blue {
@@ -1167,8 +1204,8 @@ table {
     }
 
     .main {
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-self: center;
