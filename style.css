@@ -1134,7 +1134,7 @@ table {
     opacity: 1;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1315px) {
+@media screen (min-width: 900px){
     .hero-section {
         display: inline-block;
         flex-direction: column;
